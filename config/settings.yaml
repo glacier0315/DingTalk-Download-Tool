@@ -7,9 +7,9 @@ app:
 # 下载配置
 download:
   # 下载线程数
-  thread_count: 16
+  thread_count: 3
   # 下载重试次数
-  retry_count: 3
+  retry_count: 5
   # 下载超时时间（秒）
   timeout: 100
   # 临时文件目录
@@ -20,16 +20,16 @@ download:
 # N_m3u8DL-RE 配置
 n_m3u8dl_re:
   # N_m3u8DL-RE 可执行文件路径
-  binary_path: ""
+  binary_path: "./assets/bin/N_m3u8DL-RE.exe"
   # 是否删除临时文件
   del_after_done: true
   # 是否使用系统代理
-  use_system_proxy: true
+  use_system_proxy: false
 
 # FFmpeg 配置
 ffmpeg:
   # FFmpeg 可执行文件路径
-  binary_path: ""
+  binary_path: "./assets/bin/ffmpeg.exe"
   # 合并后的视频格式
   output_format: "mp4"
 
@@ -38,7 +38,7 @@ logging:
   # 日志级别: DEBUG, INFO, WARNING, ERROR, CRITICAL
   level: "INFO"
   # 日志文件路径
-  file: "./logs/app.log"
+  file: "./logs/app_%Y-%m-%d %H:%M:%S.log"
   # 是否输出到控制台
   console: true
   # 日志格式
