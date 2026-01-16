@@ -163,3 +163,6 @@ logs/
 *.mov
 *.flv
 *.wmv
+
+# Large binary files
+assets/bin/
