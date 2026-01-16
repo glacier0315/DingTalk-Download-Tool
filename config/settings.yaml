@@ -1,0 +1,47 @@
+# 应用程序配置
+app:
+  name: "DingTalk Downloader"
+  version: "0.1.0"
+  debug: false
+
+# 下载配置
+download:
+  # 下载线程数
+  thread_count: 16
+  # 下载重试次数
+  retry_count: 3
+  # 下载超时时间（秒）
+  timeout: 100
+  # 临时文件目录
+  temp_dir: "./temp"
+  # 输出目录
+  output_dir: "./downloads"
+
+# N_m3u8DL-RE 配置
+n_m3u8dl_re:
+  # N_m3u8DL-RE 可执行文件路径
+  binary_path: ""
+  # 是否删除临时文件
+  del_after_done: true
+  # 是否使用系统代理
+  use_system_proxy: true
+
+# FFmpeg 配置
+ffmpeg:
+  # FFmpeg 可执行文件路径
+  binary_path: ""
+  # 合并后的视频格式
+  output_format: "mp4"
+
+# 日志配置
+logging:
+  # 日志级别: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  # 日志文件路径
+  file: "./logs/app.log"
+  # 是否输出到控制台
+  console: true
+  # 日志格式
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  # 日期格式
+  date_format: "%Y-%m-%d %H:%M:%S"
